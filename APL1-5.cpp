@@ -96,7 +96,7 @@ int bubble_sort()
 
             if ((feld[0] < feld[1]) && (feld[1] < feld[2]) && (feld[2] < feld[3]) && (feld[3] < feld[4]) && (feld[4] < feld[5]) && (feld[5] < feld[6]))
             {
-                return 0;
+                return 0; //Abbruch, wenn alle Elemente sortiert sind
                 printf("\n\n");
             }
         }
@@ -131,7 +131,7 @@ int main(void) {
     int feldelement = 3;
     
     
-    printf("Aufgabe 5: Feldelement %i = %x", feldelement, get_element(feld_funf, 5, feldelement));
+    printf("Aufgabe 5: Feldelement %i = %i", feldelement, get_element(feld_funf, 5, feldelement));
 
     //char string_sechs[15] = "hallola welta";
     //char zeichen_sechs = "a";
