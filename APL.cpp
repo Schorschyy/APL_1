@@ -24,7 +24,9 @@ int power_recursive(int base, int exponent)
     return result;
 }
 
-int bubble_sort()
+
+
+void bubble_sort()
 {
     int feld[] = { 6, 0, 1, 3, 2, 4, 5 };
     printf("Feld:\t \t %i\t %i\t %i\t %i\t %i\t %i\t %i\t \n==================================================================\n", feld[0], feld[1], feld[2], feld[3], feld[4], feld[5], feld[6]);
@@ -46,7 +48,8 @@ int bubble_sort()
 
             if ((feld[0] < feld[1]) && (feld[1] < feld[2]) && (feld[2] < feld[3]) && (feld[3] < feld[4]) && (feld[4] < feld[5]) && (feld[5] < feld[6]))
             {
-                return 0;
+                // was soll hier passieren? Oder Wozu ist diese Abfrage da?
+                //return 0;
             }
         }
     }
@@ -93,6 +96,19 @@ int print_square_numbers(void) {
 	return 0;
 }
 
+int get_element(int feld[], int position)
+{
+    int *pointer;
+    // setze den pointer an den Beginn des arrays
+    pointer = feld;
+
+    // sollte 'position' > als die Anzahl der Elemente im Array sein, 
+    // wird der Zugriff auf einen Speicherbereich aushalb erfolgen.
+    // dies sollte verhindert werden
+
+    return *(pointer + position);    
+}
+
 
 int main(void) {
    
@@ -105,5 +121,10 @@ int main(void) {
     multiply(7, 2);
     
     bubble_sort();
+
+    int digits[] = {0,1,2,3,4,5,6,7,8,9};
+    int pos = 6;
+    printf("element at position %i is: %i\n", pos, get_element(digits, pos));
+
     return 0;
 }
