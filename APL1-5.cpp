@@ -103,7 +103,7 @@ int bubble_sort()
     }
 }
 
-int get_element(int feld_funf[], int feldanzahl, int feld_element)
+int get_element(int feld_funf[], int feld_element)
 {
     int* pointer_feldelement;
     pointer_feldelement = &feld_funf[feld_element];
@@ -117,21 +117,41 @@ int get_element(int feld_funf[], int feldanzahl, int feld_element)
 
 int main(void) {
 
+    printf("##########################################################################################\n\n");
+
     printf("Aufgabe 1: \n\nresult non-recursive %i^%i: %i \n", 4, 6, power_nonRecursive(4, 6));
 
     printf("result recursive %i^%i: %i \n\n\n", 4, 6, power_recursive(4, 6));
 
+    printf("##########################################################################################\n\n");
+
     print_square_numbers();
+
+    printf("##########################################################################################\n\n");
 
     printf("1.Faktor: %i * 2. Faktor: %i = Produnkt: %i \n\n\n", 7, -2, multiply(7, -2));
 
+    printf("##########################################################################################\n\n");
+
     bubble_sort();
-    
+
+    printf("##########################################################################################\n\n");
+
     int feld_funf[] = { 12,23,4,5,67 };
     int feldelement = 3;
-    
-    
-    printf("Aufgabe 5: Feldelement %i = %i", feldelement, get_element(feld_funf, 5, feldelement));
+
+    int feldLength = sizeof(feld_funf)/ sizeof(feld_funf[0]);
+    if(feldelement < feldLength)
+    {
+        printf("Aufgabe 5: Feldelement %i = %i\n\n", feldelement, get_element(feld_funf, feldelement));
+    }
+    else
+    {
+        printf("Aufgabe 5: Feldelement %i liegt ausserhalb des Arrays! Feldelement muss im Bereich [%i,%i] liegen\n\n"
+                , feldelement, 0, feldLength-1);
+    }
+
+    printf("##########################################################################################\n\n");
 
     //char string_sechs[15] = "hallola welta";
     //char zeichen_sechs = "a";
