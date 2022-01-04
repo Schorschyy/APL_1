@@ -152,42 +152,42 @@ int teiler(void)
 
 int main(void) {
 
-    printf("Aufgabe 1: \n\nresult non-recursive %i^%i: %i \n", 4, 6, power_nonRecursive(4, 6));
-    printf("##########################################################################################");
+    printf("Aufgabe 1: \n\nresult non-recursive %i^%i: %i \n", 4, 6, power_nonRecursive(4, 6))
 
     printf("result recursive %i^%i: %i \n\n\n", 4, 6, power_recursive(4, 6));
-
+    printf("##########################################################################################\n");
+    
     print_square_numbers();
-    printf("##########################################################################################");
+    printf("##########################################################################################\n");
 
     printf("1.Faktor: %i * 2. Faktor: %i = Produnkt: %i \n\n\n", 7, -2, multiply(7, -2));
-    printf("##########################################################################################");
+    printf("##########################################################################################\n");
 
     bubble_sort();
-    printf("##########################################################################################");
+    printf("##########################################################################################\n");
 
     int feld_funf[] = { 12,23,4,5,67 };
     int feldelement = 8;
     int laenge = sizeof(feld_funf);
     if (laenge < feldelement)
     {
-        printf("Ausgewähltes Element liegt außerhalb des feldes. Element: %i; Feldlaenge: %i", feldelement, laenge-1);
+        printf("AusgewÃ¤hltes Element liegt auÃŸerhalb des feldes. Element: %i; Feldlaenge: %i", feldelement, laenge-1);
     }
     else
     {
         printf("Aufgabe 5:\n\nFeldelement %i = %i\n\n\n", feldelement, get_element(feld_funf, feldelement));
     }
    
-    printf("##########################################################################################");
+    printf("##########################################################################################\n");
 
     char string_sechs[15] = "hallola welta";
     char zeichen_sechs[2] = "a";
 
     count_characters(string_sechs, zeichen_sechs);
-    printf("##########################################################################################");
+    printf("##########################################################################################\n");
 
     teiler();
-    printf("##########################################################################################");
+    printf("##########################################################################################\n");
     
     return 0;
 }
